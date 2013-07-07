@@ -26,14 +26,15 @@ function Route(deps) {
                 scripts: [config.baseUri("/js/skills")]
             })
         }),
-        base: async(function* (req, res) {
+        base: function (req, res, opts, cb) {
             if (/\/js\//.test(req.url)) {
                 return serveJS(req, res)
             }
-        })
+
+            cb()
+        }
     }
 }
-
 
 function viewModel(skills) {
     return { skills: skills }
