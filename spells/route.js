@@ -42,6 +42,16 @@ function viewModel(spells) {
         }),
         waterSpells: spells.filter(function (spell) {
             return spell.type === "water"
-        })
+        }),
+        emptySpell: {
+            type: "",
+            difficulty: "",
+            id: "",
+            name: "",
+            explanation: "",
+            runes: [],
+            relatedAffinity: "",
+            shopLocations: []
+        }
     }
 }

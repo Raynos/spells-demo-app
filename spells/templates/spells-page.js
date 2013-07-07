@@ -1,18 +1,17 @@
+var SpellEditor = require("./editor")
+
 module.exports = SpellsPage
 
 function SpellsPage(model) {
     return { fragment: [
-        ["div#fire-spells", [
-            editList("Fire Spells", model.fireSpells)
-        ]],
-        ["div#water-spells", [
-            editList("Water Spells", model.waterSpells)
-        ]]
+        editList("fire-spells", "Fire Spells", model.fireSpells),
+        editList("water-spells", "Water Spells", model.waterSpells),
+        SpellEditor(model.emptySpell)
     ] }
 }
 
-function editList(name, items) {
-    return ["div", [
+function editList(id, name, items) {
+    return ["div#" + id, [
         ["h2", name],
         { fragment: items.map(editLink) },
         ["button", {

@@ -4,6 +4,7 @@
         id: String,
         type: Enum("water", "fire"),
         difficulty: Enum("easy", "normal", "hard"),
+        name: String,
         explanation: HtmlString,
         runes: Array<{
             type: String,
