@@ -3,7 +3,7 @@ var ServeJavascript = require("serve-browserify")
 var path = require("path")
 
 var layout = require("./lib/layout")
-var SkillsPage = require("./templates/skills-page")
+var SpellsPage = require("./templates/spells-page")
 
 module.exports = Route
 
@@ -16,14 +16,14 @@ function Route(deps) {
     })
 
     return {
-        skills: async(function* (req, res) {
-            var skills = yield domain.getAll.bind(null)
+        spells: async(function* (req, res) {
+            var spells = yield domain.getAll.bind(null)
 
-            var model = viewModel(skills)
-            var template = SkillsPage(model)
+            var model = viewModel(spells)
+            var template = SpellsPage(model)
 
             layout(req, res, template, {
-                scripts: [config.baseUri("/js/skills")]
+                scripts: [config.baseUri("/js/spells")]
             })
         }),
         base: function (req, res) {
@@ -34,6 +34,13 @@ function Route(deps) {
     }
 }
 
-function viewModel(skills) {
-    return { skills: skills }
+function viewModel(spells) {
+    return {
+        fireSpells: spells.filter(function (spell) {
+            return spell.type === "fire"
+        }),
+        waterSpells: spells.filter(function (spell) {
+            return spell.type === "water"
+        })
+    }
 }

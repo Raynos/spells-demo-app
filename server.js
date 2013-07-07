@@ -8,13 +8,13 @@ var SpellsDomain = require("./spells/domain.js")
 var spellsDomain = SpellsDomain()
 var spellsRoutes = SpellsRoute({
     domain: spellsDomain,
-    config: Config("skills")
+    config: Config("spells")
 })
 
 var router = RoutesRouter()
-router.addRoute("/", spellsRoutes.skills)
-router.addRoute("/skills", spellsRoutes.skills)
-router.addRoute("/base/skills/*", spellsRoutes.base)
+router.addRoute("/", spellsRoutes.spells)
+router.addRoute("/spells", spellsRoutes.spells)
+router.addRoute("/base/spells/*", spellsRoutes.base)
 
 var server = http.createServer(router)
     .listen(opts.PORT || 8000, function () {

@@ -23,7 +23,9 @@
     "routes": "~0.2.0",
     "optimist": "~0.6.0",
     "write-html": "~0.1.2",
-    "routes-router": "~1.0.2"
+    "routes-router": "~1.0.2",
+    "http-methods": "~0.1.0",
+    "serve-browserify": "~0.3.2"
   },
   "devDependencies": {
     "tape": "~1.0.2"
