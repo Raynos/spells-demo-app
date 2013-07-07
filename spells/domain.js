@@ -1,3 +1,19 @@
+/*
+    type HtmlString := String
+    type Spell := {
+        id: String,
+        type: Enum("water", "fire"),
+        difficulty: Enum("easy", "normal", "hard"),
+        explanation: HtmlString,
+        runes: Array<{
+            type: String,
+            count: Number
+        }>,
+        relatedAffinity: Enum("love", "mother"),
+        shopLocations: Array<String>
+    }
+*/
+
 module.exports = Domain
 
 function Domain() {
