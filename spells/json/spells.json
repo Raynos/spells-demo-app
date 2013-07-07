@@ -1,0 +1,166 @@
+[{
+    "id": "spell-1",
+    "type": "fire",
+    "difficulty": "easy",
+    "name": "Fire spit",
+    "explanation": "<strong>Explain all the things</strong>",
+    "runes": [{
+        "type": "fehu",
+        "count": 10
+    }, {
+        "type": "ansuz",
+        "count": 5
+    }, {
+        "type": "algiz",
+        "count": 17
+    }, {
+        "type": "isa",
+        "count": 11
+    } ,{
+        "type": "inguz",
+        "count": 1
+    }],
+    "relatedAffinity": "love",
+    "shopLocations": [
+        "@Raynos' house",
+        "Markozy town",
+        "Cat cave"
+    ]
+}, {
+    "id": "spell-2",
+    "type": "fire",
+    "difficulty": "normal",
+    "name": "Fire Throw",
+    "explanation": "<strong>Explain all the things</strong>",
+    "runes": [{
+        "type": "fehu",
+        "count": 110
+    }, {
+        "type": "ansuz",
+        "count": 33
+    }, {
+        "type": "algiz",
+        "count": 99
+    }, {
+        "type": "isa",
+        "count": 18
+    } ,{
+        "type": "inguz",
+        "count": 5
+    }],
+    "relatedAffinity": "love",
+    "shopLocations": [
+        "@Raynos' house",
+        "Markozy town",
+        "Cat cave"
+    ]
+}, {
+    "id": "spell-3",
+    "type": "fire",
+    "difficulty": "hard",
+    "name": "Fire Tornado",
+    "explanation": "<strong>Explain all the things</strong>",
+    "runes": [{
+        "type": "fehu",
+        "count": 330
+    }, {
+        "type": "ansuz",
+        "count": 505
+    }, {
+        "type": "algiz",
+        "count": 162
+    }, {
+        "type": "isa",
+        "count": 40
+    } ,{
+        "type": "inguz",
+        "count": 112
+    }],
+    "relatedAffinity": "love",
+    "shopLocations": [
+        "@Raynos' house",
+        "Markozy town",
+        "Cat cave"
+    ]
+}, {
+    "id": "spell-4",
+    "type": "water",
+    "difficulty": "easy",
+    "name": "Sprinkle",
+    "explanation": "<strong>Explain all the things</strong>",
+    "runes": [{
+        "type": "fehu",
+        "count": 1
+    }, {
+        "type": "ansuz",
+        "count": 7
+    }, {
+        "type": "algiz",
+        "count": 1
+    }, {
+        "type": "isa",
+        "count": 25
+    } ,{
+        "type": "inguz",
+        "count": 30
+    }],
+    "relatedAffinity": "mother",
+    "shopLocations": [
+        "@Dominictarr's house",
+        "Cat cave"
+    ]
+}, {
+    "id": "spell-5",
+    "type": "water",
+    "difficulty": "normal",
+    "name": "Waterfall",
+    "explanation": "<strong>Explain all the things</strong>",
+    "runes": [{
+        "type": "fehu",
+        "count": 10
+    }, {
+        "type": "ansuz",
+        "count": 5
+    }, {
+        "type": "algiz",
+        "count": 17
+    }, {
+        "type": "isa",
+        "count": 35
+    } ,{
+        "type": "inguz",
+        "count": 90
+    }],
+    "relatedAffinity": "mother",
+    "shopLocations": [
+        "@Dominictarr's house",
+        "Cat cave"
+    ]
+}, {
+    "id": "spell-6",
+    "type": "water",
+    "difficulty": "hard",
+    "name": "Tsunami",
+    "explanation": "<strong>Explain all the things</strong>",
+    "runes": [{
+        "type": "fehu",
+        "count": 41
+    }, {
+        "type": "ansuz",
+        "count": 65
+    }, {
+        "type": "algiz",
+        "count": 44
+    }, {
+        "type": "isa",
+        "count": 99
+    } ,{
+        "type": "inguz",
+        "count": 330
+    }],
+    "relatedAffinity": "mother",
+    "shopLocations": [
+        "@Dominictarr's house",
+        "Cat cave"
+    ]
+}]
