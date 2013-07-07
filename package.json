@@ -1,0 +1,63 @@
+{
+  "name": "spells-demo-app",
+  "version": "0.1.0",
+  "description": "Demonstration application for no DOM",
+  "keywords": [],
+  "author": "Raynos <raynos2@gmail.com>",
+  "repository": "git://github.com/Raynos/spells-demo-app.git",
+  "main": "index",
+  "homepage": "https://github.com/Raynos/spells-demo-app",
+  "contributors": [
+    {
+      "name": "Raynos"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/Raynos/spells-demo-app/issues",
+    "email": "raynos2@gmail.com"
+  },
+  "dependencies": {
+    "gens": "~0.2.2",
+    "send-data": "~1.1.3",
+    "jsonml-stringify": "~0.3.3",
+    "routes": "~0.2.0",
+    "optimist": "~0.6.0",
+    "write-html": "~0.1.2",
+    "routes-router": "~0.1.3"
+  },
+  "devDependencies": {
+    "tape": "~1.0.2"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/Raynos/spells-demo-app/raw/master/LICENSE"
+    }
+  ],
+  "scripts": {
+    "test": "node ./test/index.js",
+    "start": "node --harmony-generators ./server.js",
+    "watch": "nodemon -w ./index.js index.js",
+    "travis-test": "istanbul cover ./test/index.js && ((cat coverage/lcov.info | coveralls) || exit 0)",
+    "cover": "istanbul cover --report none --print detail ./test/index.js",
+    "view-cover": "istanbul report html && google-chrome ./coverage/index.html",
+    "test-browser": "testem-browser ./test/browser/index.js",
+    "testem": "testem-both -b=./test/browser/index.js"
+  },
+  "testling": {
+    "files": "test/index.js",
+    "browsers": [
+      "ie/8..latest",
+      "firefox/16..latest",
+      "firefox/nightly",
+      "chrome/22..latest",
+      "chrome/canary",
+      "opera/12..latest",
+      "opera/next",
+      "safari/5.1..latest",
+      "ipad/6.0..latest",
+      "iphone/6.0..latest",
+      "android-browser/4.2..latest"
+    ]
+  }
+}
