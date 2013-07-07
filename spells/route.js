@@ -2,7 +2,7 @@ var async = require("gens")
 var ServeJavascript = require("serve-browserify")
 var path = require("path")
 
-var render = require("./lib/render")
+var layout = require("./lib/layout")
 var SkillsPage = require("./templates/skills-page")
 
 module.exports = Route
@@ -22,16 +22,14 @@ function Route(deps) {
             var model = viewModel(skills)
             var template = SkillsPage(model)
 
-            render(req, res, template, {
+            layout(req, res, template, {
                 scripts: [config.baseUri("/js/skills")]
             })
         }),
-        base: function (req, res, opts, cb) {
+        base: function (req, res) {
             if (/\/js\//.test(req.url)) {
                 return serveJS(req, res)
             }
-
-            cb()
         }
     }
 }

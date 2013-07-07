@@ -4,9 +4,9 @@ var WriteHtml = require("write-html")
 var head = require("../templates/head")
 var Layout = require("../templates/layout")
 
-module.exports = render
+module.exports = layout
 
-function render(req, res, body, opts) {
+function layout(req, res, body, opts) {
     var page = Layout(body, opts)
 
     var writer = WriteHtml(req, res)
