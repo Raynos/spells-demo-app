@@ -23,7 +23,8 @@ function Route(deps) {
             var template = SpellsPage(model)
 
             layout(req, res, template, {
-                scripts: [config.baseUri("/js/spells")]
+                scripts: [config.baseUri("/js/spells")],
+                globals: { model: model }
             })
         }),
         base: function (req, res) {

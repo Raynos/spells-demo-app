@@ -10,7 +10,7 @@ function Domain() {
             }))
         },
         save: function save(record, callback) {
-            skills[record.id] = record
+            spells[record.id] = record
             callback(null, record)
         }
     }

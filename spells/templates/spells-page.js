@@ -1,19 +1,23 @@
 module.exports = SpellsPage
 
 function SpellsPage(model) {
-    return {
-        fragment: [
-            editList("Fire Spells", model.fireSpells),
+    return { fragment: [
+        ["div#fire-spells", [
+            editList("Fire Spells", model.fireSpells)
+        ]],
+        ["div#water-spells", [
             editList("Water Spells", model.waterSpells)
-        ]
-    }
+        ]]
+    ] }
 }
 
 function editList(name, items) {
     return ["div", [
-        ["h2", name], {
-            fragment: items.map(editLink)
-        }, ["button", "+ Add Spell"]
+        ["h2", name],
+        { fragment: items.map(editLink) },
+        ["button", {
+            "data-event~click": "add"
+        }, "+ Add Spell"]
     ]]
 }
 
