@@ -20,11 +20,13 @@ module.exports = {
 }
 
 function listTextArea(opts) {
+    var event = opts.event || id
+
     return ["div", [
         ["label", opts.label],
-        ["textarea", {
+        event(["textarea", {
             placeholder: opts.placeholder
-        }, opts.value.join( opts.seperator || "\n")]
+        }, opts.value.join( opts.seperator || "\n")])
     ]]
 }
 
@@ -37,40 +39,48 @@ function listControl(opts) {
 }
 
 function htmlEditor(opts) {
+    var event = opts.event || id
+
     return ["div", [
         ["label", opts.label],
-        ["textarea.ckeditor", {
+        event(["textarea.ckeditor", {
             placeholder: opts.placeholder
-        }, opts.value]
+        }, opts.value])
     ]]
 }
 
 function stringInput(opts) {
+    var event = opts.event || id
+
     return ["div", [
         ["label", opts.label],
-        ["input", {
+        event(["input", {
             type: "text",
             placeholder: opts.placeholder,
             value: opts.value
-        }]
+        }])
     ]]
 }
 
 function numberInput(opts) {
+    var event = opts.event || id
+
     return ["div", [
         ["label", opts.label],
-        ["input", {
+        event(["input", {
             type: "number",
             placeholder: opts.placeholder,
             value: opts.value
-        }]
+        }])
     ]]
 }
 
 function enumDropdown(opts) {
+    var event = opts.event || id
+
     return ["div", [
         ["label", opts.label],
-        ["select", [
+        event(["select", [
             ["option", { value: "" }, opts.placeholder],
             { fragment: opts.options.map(function (str) {
                 return ["option", {
@@ -78,6 +88,8 @@ function enumDropdown(opts) {
                     selected: opts.value === str
                 }, str]
             }) }
-        ]]
+        ]])
     ]]
 }
+
+function id(x) { return x }

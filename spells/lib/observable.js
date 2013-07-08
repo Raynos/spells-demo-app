@@ -11,10 +11,21 @@ module.exports = Observable
 function Observable(value) {
     var listeners = []
     observable.set = function (v) {
+        if (value === v) {
+            return
+        }
+
         value = v
         listeners.forEach(function (f) {
             return f(v)
         })
+    }
+    observable.transform = function (lambda) {
+        var o = Observable(lambda(value))
+        observable(function (value) {
+            o.set(lambda(value))
+        })
+        return o
     }
 
     return observable

@@ -1,4 +1,5 @@
 var JSONGlobals = require("json-globals/get")
+var EventEmitter = require("events").EventEmitter
 
 var interactions = require("../lib/interactions")
 
@@ -29,7 +30,9 @@ function SpellList(opts) {
     })
 }
 
-function SpellEditor() {
+function SpellEditor(id) {
+    var events = unpackEmitter(id)
+
     return {
         show: show
     }
@@ -37,4 +40,10 @@ function SpellEditor() {
     function show(record) {
         console.log("showing things", record)
     }
+}
+
+function unpackEmitter(elem) {
+    var events = new EventEmitter()
+
+    return events
 }
